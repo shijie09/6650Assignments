@@ -19,6 +19,7 @@ public class MultiThreads {
     ConnectionFactory factory = new ConnectionFactory();
 
     factory.setHost("localhost");
+
     connection = factory.newConnection();
     ProcessSwipees processSwipees = new ProcessSwipees();
     for (int i = 0; i < numOfThread; i++) {

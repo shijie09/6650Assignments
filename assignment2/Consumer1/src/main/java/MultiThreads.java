@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 public class MultiThreads {
-  private static final int numOfThread = 100;
+
+  private static final int numOfThread = 1;
+
   private static Connection connection;
   public static void main(String[] args) throws InterruptedException, IOException, TimeoutException {
 
@@ -17,7 +19,9 @@ public class MultiThreads {
 
     ConnectionFactory factory = new ConnectionFactory();
 
+
     factory.setHost("52.39.250.165");
+
 
     connection = factory.newConnection();
     ProcessLikesAndDislikes processLikesAndDislikes = new ProcessLikesAndDislikes();
