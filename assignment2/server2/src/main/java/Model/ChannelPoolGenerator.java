@@ -13,11 +13,9 @@ public class ChannelPoolGenerator {
 
   public ChannelPoolGenerator() throws IOException, TimeoutException {
     ConnectionFactory factory = new ConnectionFactory();
-<<<<<<< HEAD
+
     factory.setHost("52.39.250.165");
-=======
-    factory.setHost("35.88.126.224");
->>>>>>> refs/remotes/origin/main
+
     factory.setPassword("guest");
     factory.setUsername("guest");
 
