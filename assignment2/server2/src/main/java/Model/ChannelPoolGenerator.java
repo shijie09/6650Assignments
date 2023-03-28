@@ -13,7 +13,7 @@ public class ChannelPoolGenerator {
 
   public ChannelPoolGenerator() throws IOException, TimeoutException {
     ConnectionFactory factory = new ConnectionFactory();
-    factory.setHost("34.219.55.238");
+    factory.setHost("52.39.250.165");
     factory.setPassword("guest");
     factory.setUsername("guest");
 

@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 public class MultiThreads {
-  private static final int numOfThread = 5;
+  private static final int numOfThread = 1;
   private static Connection connection;
   private static String userId = "123";
   public static void main(String[] args) throws InterruptedException, IOException, TimeoutException {
@@ -18,7 +18,7 @@ public class MultiThreads {
 
     ConnectionFactory factory = new ConnectionFactory();
 
-    factory.setHost("34.219.55.238");
+    factory.setHost("localhost");
     connection = factory.newConnection();
     ProcessSwipees processSwipees = new ProcessSwipees();
     for (int i = 0; i < numOfThread; i++) {

@@ -21,15 +21,14 @@ public class MultiThreads {
   private static AtomicInteger successReq;
   private static AtomicInteger failReq;
   private static BlockingQueue<Event> events;
-  private static final int numOfThread = 500;
+  private static final int numOfThread = 100;
   private static final int totalReq = 500000;
-  private static final int processorNumberEach = 1000;
+  private static final int processorNumberEach = 5000;
   private static String pathName;
   public static void main(String[] args) throws InterruptedException {
 //    urlBase = "http://localhost:8080/server2_war_exploded";
-    urlBase = "http://my-alb-1984034483.us-west-2.elb.amazonaws.com/server2_war";
-    urlBase = "http://lb-sevlet-1252734141.us-west-2.elb.amazonaws.com/hw1_war";
-//    urlBase = "http://34.217.81.52:8080/server2_war";
+//    urlBase = "http://my-alb-1984034483.us-west-2.elb.amazonaws.com/server2_war";
+    urlBase = "http://34.209.47.67:8080/server2_war";
     successReq = new AtomicInteger(0);
     failReq = new AtomicInteger(0);
     events = new LinkedBlockingQueue<>();
@@ -60,19 +59,6 @@ public class MultiThreads {
     double medianTime = recordsAnalysis.getMedianLatency();
     double meanLatency = recordsAnalysis.getMeanLatency();
 
-//    try(BufferedWriter writer = new BufferedWriter(new FileWriter(pathName))) {
-//      writer.write("Start Time, Request Type, Latency, Response Code"+ System.lineSeparator());
-//      for(Record rec : records) {
-//        writer.write(rec.toString() + System.lineSeparator());
-//
-//      }
-//    } catch(FileNotFoundException fnfe) {
-//      System.out.println("*** OOPS! A file was not found : " + fnfe.getMessage());
-//      fnfe.printStackTrace();
-//    } catch(IOException ioe) {
-//      System.out.println("Something went wrong! : " + ioe.getMessage());
-//      ioe.printStackTrace();
-//    }
 
     System.out.println("*********************************************************");
     System.out.println("Processing Ends");

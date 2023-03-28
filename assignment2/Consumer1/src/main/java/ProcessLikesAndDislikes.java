@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,16 +16,14 @@ public class ProcessLikesAndDislikes {
   }
 
   public void swipe(String leftOrRight, String swiper, String swipee) {
-    // left means dislike
-    if(leftOrRight.equals("left")) {
+    if(leftOrRight.equals("right")) {
       dislikesReceived.put(swiper, dislikesReceived.getOrDefault(swiper, 0) + 1);
     }else {
-      // right means like
       likesReceived.put(swiper, likesReceived.getOrDefault(swiper, 0) + 1);
       if(!likedUsers.containsKey(swiper)) {
         likedUsers.put(swiper, Collections.synchronizedList(new ArrayList<>()));
-        likedUsers.get(swiper).add(swipee);
       }
+      likedUsers.get(swiper).add(swipee);
     }
   }
 
@@ -39,15 +35,4 @@ public class ProcessLikesAndDislikes {
     return dislikesReceived.get(swiper);
   }
 
-  public List<String> getTop100LikedUsers(String swiper) {
-//    List<String> liked = new ArrayList<>();
-//    if(liked.size() <= 100)
-//      liked = likedUsers.get(swiper);
-//    else {
-//      for(int i = 0; i < 100; i++) {
-//        liked.add()
-//      }
-//    }
-    return new ArrayList<>();
-  }
 }

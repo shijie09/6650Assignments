@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 public class Consumer1 implements Runnable{
-  private final static String QUEUE_NAME = "HAPPYPOOL1";
+  private final static String QUEUE_NAME = "HAPPYPOOL2";
   private Connection connection;
 
   private ProcessLikesAndDislikes processLikesAndDislikes;
